@@ -171,10 +171,10 @@ function displayData(data){
 			// add the weather for each date to the page with the information listed in comments above
 			forecastHTML += `<section class="day">
 								<h3><span>${date.toLocaleString("en-us", {weekday: "long"})}</span> ${date.toLocaleString("en-us", {month: "long"})} ${date.getDate()}</h3>
-								<img src="${conditions[data.daily.weather_code[i]].path}" alt="${conditions[data.daily.weather_code[i].desc]}">
+								<img src="${conditions[data.daily.weather_code[i]].path}" alt="${conditions[data.daily.weather_code[i]].desc}">
 								<p><b>High: </b>${Math.round(data.daily.temperature_2m_max[i])}</p>
 								<p><b>Low: </b>${Math.round(data.daily.temperature_2m_min[i])}</p>
-								<p>${conditions[data.daily.weather_code[i].desc]}</p>
+								<p>${conditions[data.daily.weather_code[i]].desc}</p>
 							</section>`;
 		}
 	// add the complete upcoming forecast to the page
